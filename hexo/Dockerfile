@@ -23,10 +23,10 @@ RUN \
     npm install hexo-deployer-git --save && \
 
     # _config.yml配置文件
-    mkdir -p /root/hexo_files && \
-    git clone https://github.com/lovewen/Hexo_blog.git /root/hexo_files && \
-    cp /root/hexo_files/_config.yml . && \
-    rm -r /root/*
+    # mkdir -p /root/hexo_files && \
+    # git clone https://github.com/lovewen/Hexo_blog.git /root/hexo_files && \
+    # cp /root/hexo_files/_config.yml . && \
+    # rm -r /root/*
 
 EXPOSE 4000
 CMD ['/bin/bash']
