@@ -19,7 +19,7 @@ RUN \
     npm install -g n && \
     n stable && \
     hexo init && \
-    npm install hexo-deployer-git --save
+    npm install hexo-deployer-git --save && \
 
     # _config.yml配置文件
     mkdir -p /root/hexo_files && \
