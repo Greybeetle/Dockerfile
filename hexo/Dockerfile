@@ -15,7 +15,6 @@ RUN \
 ENV LANG C.UTF-8
 
 WORKDIR /Hexo
-#VOLUME ["/Hexo/source", "/Hexo/themes", "/root/.ssh"]
 RUN \
     npm install -g n && \
     n stable && \
@@ -23,10 +22,10 @@ RUN \
     npm install hexo-deployer-git --save
 
     # _config.yml配置文件
-    # mkdir -p /root/hexo_files && \
-    # git clone https://github.com/lovewen/Hexo_blog.git /root/hexo_files && \
-    # cp /root/hexo_files/_config.yml . && \
-    # rm -r /root/*
+    mkdir -p /root/hexo_files && \
+    git clone -b hexo_theme git@github.com:lovewen/lovewen.github.io.git /root/hexo_files && \
+    cp /root/hexo_files/lovewen.github.io.git/landscape/* . && \
+    rm -r /root/*
 
 EXPOSE 4000
 CMD ['/bin/bash']
