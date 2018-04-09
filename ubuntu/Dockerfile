@@ -15,7 +15,7 @@ RUN \
     echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe"  >> /etc/apt/sources.list && \
     echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse"  >> /etc/apt/sources.list && \
     apt-get update && \
-    apt-get upgrade && \
+    apt-get -y upgrade && \
     apt-get install -y git curl vim-gtk tree net-tools iputils-ping && \
     apt-get clean
 ENV LANG C.UTF-8
